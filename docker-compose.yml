@@ -1,0 +1,16 @@
+version: "2"
+services:
+  app:
+    image: kuwork/lizheng:latest
+    restart: always
+    expose:
+      - 8274
+      - 8273
+    ports:
+      - 8274:8274
+      - 8273:8273
+    volumes:
+      - ./logs:/opt/bitanswer/service/logs
+      # - ./manager-cn:/opt/bitanswer/service/manager
+      # - ./data:/opt/bitanswer/service/data
+    # command: /opt/bitanswer/service/manager.sh start
